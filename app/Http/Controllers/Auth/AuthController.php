@@ -9,6 +9,12 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $credentials = $request->all();
+        dd('In Progress');
+    }
+
+    public function signupWithGoogle()
+    {
+        dd('Signup with Google');
+
     }
 }
