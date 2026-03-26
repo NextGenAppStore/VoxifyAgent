@@ -15,6 +15,5 @@ class AuthController extends Controller
     public function signupWithGoogle()
     {
         dd('Signup with Google');
-
     }
 }

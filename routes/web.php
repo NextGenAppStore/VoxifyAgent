@@ -14,9 +14,5 @@ Route::get('/google-signup', [AuthController::class, 'signupWithGoogle'])->name(
 
 Route::group(['prefix' => 'auth'], function () {
     Route::get('/redirect', [GoogleOAuthController::class, 'redirect']);
-    Route::get('/auth/callback', function () {
-        $user = Socialite::driver('github')->user();
-
-        // $user->token
-    });
+    Route::get('/auth/callback', [GoogleOAuthController::class, 'callback']);
 });
